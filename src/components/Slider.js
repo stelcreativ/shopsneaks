@@ -6,13 +6,14 @@ import ArrowBackIosNewOutlined from '@mui/icons-material/ArrowBackIosNewOutlined
 import ArrowForwardIosOutlined from '@mui/icons-material/ArrowForwardIosOutlined';
 
 const Container = styled.div`
-    width: 50vw;
+    width: 60vw;
     height: 60px;
     display: flex;
     flex: 1
     justify-content: center;
     align-items: center;
     position: relative
+   
 `
 const Arrow = styled.div`
     width: 50px;
@@ -31,26 +32,36 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
-    flexwrap: wrap;
-    overflow-x: hidden
+    overflow-x: hidden;
     transition: all 1.5s ease;
-    transform: translateX(${props => props.slideIndex * -30}vw)
+    transform: translateX(${(props) => props.slideIndex * -100}vw)
 `
 
 const Slide = styled.div`
     width: 30vw;
     display: flex;
     align-items: center;
+    justify-content: center;
+    position : relative;
+    top:0;
+    bottom:0;
+
+    @media (max-width: 700px) {
+        display: none;
+    }
 `
 const InfoContainer = styled.div`
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding:  5px;
+ 
 `
 const PromoContent = styled.p`
     align-items: center;
-    margin: 30px 20px;
+    justify-content: center;
+    margin: 5px;
     font-size: 14px;
+
     
 `
 const Button = styled.button`
@@ -78,8 +89,8 @@ const Slider = () => {
                 <ArrowBackIosNewOutlined />
             </Arrow>
             <Wrapper slideIndex={slideIndex}>
-                {PromoSliderItems.map((item) => (
-                    <Slide>
+                {PromoSliderItems.map((item, key) => (
+                    <Slide key={key}>
                         <InfoContainer>
                             <PromoContent>{item.info}
 
@@ -93,7 +104,7 @@ const Slider = () => {
                 ))}
 
             </Wrapper>
-            <Arrow direction="right" >
+            <Arrow direction="right" onClick={() => handleClick("right")}>
                 <ArrowForwardIosOutlined />
             </Arrow>
         </Container>
