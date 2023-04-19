@@ -88,9 +88,9 @@ const ProductPage = () => {
 
     useEffect(() => {
         const urls = [
-            "https://0b69-45-132-108-35.eu.ngrok.io/Nike",
-            "https://0b69-45-132-108-35.eu.ngrok.io/footasylum",
-            "https://0b69-45-132-108-35.eu.ngrok.io/Lifestyle",
+            "https://stelcreativ.github.io/apistyle/Sneakerstyle.json",
+            "https://stelcreativ.github.io/apistyle/Sneakerstyle.json",
+            "https://stelcreativ.github.io/apistyle/Sneakerstyle.json",
         ]
 
         const chosen_codes = new Set(["21644010", "4066328", "DV3453-100"])

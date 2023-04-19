@@ -15,7 +15,7 @@ const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    hover: {transform: scale(1.1)}
+    &:hover {transform: scale(1.1)}
 `
 
 const Description = styled.div`

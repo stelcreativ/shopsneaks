@@ -25,7 +25,7 @@ const Home = () => {
     const [sneakers, setSneakers] = useState([])
 
     useEffect(() => {
-        fetch("https://0b69-45-132-108-35.eu.ngrok.io/footasylum")
+        fetch("https://stelcreativ.github.io/apistyle/Sneakerstyle.json")
             .then(res => {
                 return res.json()
             })

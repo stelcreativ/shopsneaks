@@ -38,7 +38,7 @@ const Center = styled.div`
     justify-content: space-between;
     text-align: center;
 `
-const Logo = styled.img`
+const Logo = styled.div`
     margin-left: 20px;
     max-width: 50px;
     Background: transparent;
@@ -79,7 +79,7 @@ const Navbar = () => {
         <Container>
             <Wrapper>
                 <Left>
-                    <Logo src={logo}></Logo>
+                    <Logo>Shopsneakers</Logo>
                 </Left>
                 <Center>
                     <MenuHamb><MenuIcon /></MenuHamb>

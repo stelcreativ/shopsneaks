@@ -6,13 +6,13 @@ import ArrowBackIosNewOutlined from '@mui/icons-material/ArrowBackIosNewOutlined
 import ArrowForwardIosOutlined from '@mui/icons-material/ArrowForwardIosOutlined';
 
 const Container = styled.div`
-    width: 60vw;
+    width: 40vw;
     height: 60px;
     display: flex;
-    flex: 1
     justify-content: center;
     align-items: center;
-    position: relative
+    position: relative;
+    overflow: hidden
    
 `
 const Arrow = styled.div`
@@ -21,7 +21,7 @@ const Arrow = styled.div`
     display: flex;
     justify-content: center;
     position: absolute;
-    top:0;
+    top:15;
     bottom: 0;
     left: ${props => props.direction === "left" && "10px"};
     right: ${props => props.direction === "right" && "10px"};
@@ -32,13 +32,12 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
-    overflow-x: hidden;
     transition: all 1.5s ease;
     transform: translateX(${(props) => props.slideIndex * -100}vw)
 `
 
 const Slide = styled.div`
-    width: 30vw;
+    width: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
