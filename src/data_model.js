@@ -60,9 +60,9 @@ export class ApiSpec {
 
 export function getProducts(api_contents) {
     const api_specs = {
-        "Nike": new ApiSpec({}),
+        //"Nike.json": new ApiSpec({}),
         "Sneakerstyle.json": new ApiSpec({ "model_name": "Text1", "colour": "Text2" }),
-        "Lifestyle": new ApiSpec({ "model_name": "Name", "colour": "Text1" })
+        "Lifestyle.json": new ApiSpec({ "model_name": "Name", "colour": "Text1" })
 
     }
 

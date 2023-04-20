@@ -89,11 +89,11 @@ const ProductPage = () => {
     useEffect(() => {
         const urls = [
             "https://stelcreativ.github.io/apistyle/Sneakerstyle.json",
-            "https://stelcreativ.github.io/apistyle/Sneakerstyle.json",
-            "https://stelcreativ.github.io/apistyle/Sneakerstyle.json",
+            "https://stelcreativ.github.io/apistyle2/Lifestyle",
+            // "https://stelcreativ.github.io/apistyle/Sneakerstyle.json",
         ]
 
-        const chosen_codes = new Set(["21644010", "4066328", "DV3453-100"])
+        const chosen_codes = new Set(["21644010", "4066328"])
         Promise.all(urls.map(url =>
             fetch(url).then(resp => resp.json())
         ))
